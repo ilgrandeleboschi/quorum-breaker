@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>uk.groveio</groupId>
+        <artifactId>quorum-breaker</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>quorum-breaker-redis-spring</artifactId>
+    <packaging>jar</packaging>
+
+    <name>quorum-breaker-redis-spring</name>
+    <description>Spring Boot autoconfiguration bridging RedisClient/RedisURI beans to a ClusterCoordinator bean.
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.groveio</groupId>
+            <artifactId>quorum-breaker-redis</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
